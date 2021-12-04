@@ -10,7 +10,7 @@ def main():
         ticker = ex.fetch_ticker(symbol="BTC/USDT")
         info = dict(time=ticker["datetime"], price=ticker["average"])
         print(info)
-        sleep(1)
+        sleep(3)
 
 
 if __name__ == "__main__":
