@@ -1,4 +1,4 @@
 deploy:
   - okteto build -t okteto.dev/btc-alert-test:${OKTETO_GIT_COMMIT}
-  - envsubst < k8s/deployment.tpl.yaml > k8s/deployment.yaml
+  - envsubst < k8s/deployment.tpl > k8s/deployment.yaml
   - kubectl apply -f k8s
