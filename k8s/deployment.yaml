@@ -14,4 +14,5 @@ spec:
     spec:
       containers:
         - name: btc-alert-test
-          image: okteto.dev/btc-alert-test:latest
+          image: okteto.dev/btc-alert-test:$OKTETO_GIT_COMMIT
+      imagePullPolicy: Always
