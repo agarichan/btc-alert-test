@@ -27,6 +27,7 @@ COPY src src
 RUN poetry build -f wheel
 
 FROM base AS runtime
+ENV PYTHONUNBUFFERED=0
 COPY --from=builder /runtime /usr/local
 COPY --from=builder /dist /dist
 
